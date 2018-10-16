@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-with open('PropertyForSale/config.json') as f:
+with open(os.path.join(BASE_DIR, 'PropertyForSale/config.json')) as f:
     SECRET_KEY = json.load(f)['secret_key']
 
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apartments'
 ]
 
 MIDDLEWARE = [
