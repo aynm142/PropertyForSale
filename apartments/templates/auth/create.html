@@ -1,0 +1,10 @@
+<form method="post">
+    {% csrf_token %}
+    {% for field in user_form %}
+        {{ field.label }} {{ field }}<br><br>
+    {% endfor %}
+    {% for field in profile_form %}
+        {{ field.label }} {{ field }}<br><br>
+    {% endfor %}
+    <input type="submit" value="Зарегистрироваться">
+</form>
